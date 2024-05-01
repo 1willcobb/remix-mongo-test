@@ -1,12 +1,33 @@
 import {
+  Form,
   Links,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
+  redirect,
+  useLoaderData,
 } from "@remix-run/react";
 
+import { ActionFunctionArgs, json } from "@remix-run/node";
+import {
+  getAllUsers,
+  createUser,
+} from "./utils/controllers/UserController.server";
+
+export const loader = async () => {
+  try {
+    const users = await getAllUsers(); // Fetch all users or adjust query as needed
+
+    return json(users);
+  } catch (err) {
+    throw new Response("Not Found", { status: 404 });
+  }
+};
+
 export function Layout({ children }: { children: React.ReactNode }) {
+  // const users = useLoaderData();
+
   return (
     <html lang="en">
       <head>
@@ -16,7 +37,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
+        <Outlet />
         <ScrollRestoration />
         <Scripts />
       </body>
