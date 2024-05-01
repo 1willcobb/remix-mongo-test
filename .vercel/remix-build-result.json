@@ -1,0 +1,147 @@
+{
+  "buildManifest": {
+    "serverBundles": {
+      "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0": {
+        "id": "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0",
+        "file": "build/server/nodejs-eyJydW50aW1lIjoibm9kZWpzIn0/index.js",
+        "config": {
+          "runtime": "nodejs"
+        }
+      }
+    },
+    "routeIdToServerBundleId": {
+      "routes/dashboard.allUsers": "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/dashboard.$id.f": "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/dashboard.login": "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/dashboard.$id": "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/dashboard": "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/_index": "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0"
+    },
+    "routes": {
+      "root": {
+        "path": "",
+        "id": "root",
+        "file": "app/root.tsx",
+        "config": {}
+      },
+      "routes/dashboard.allUsers": {
+        "file": "app/routes/dashboard.allUsers.tsx",
+        "id": "routes/dashboard.allUsers",
+        "path": "allUsers",
+        "parentId": "routes/dashboard",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/dashboard.$id.f": {
+        "file": "app/routes/dashboard.$id.f.tsx",
+        "id": "routes/dashboard.$id.f",
+        "path": "f",
+        "parentId": "routes/dashboard.$id",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/dashboard.login": {
+        "file": "app/routes/dashboard.login.tsx",
+        "id": "routes/dashboard.login",
+        "path": "login",
+        "parentId": "routes/dashboard",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/dashboard.$id": {
+        "file": "app/routes/dashboard.$id.tsx",
+        "id": "routes/dashboard.$id",
+        "path": ":id",
+        "parentId": "routes/dashboard",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/dashboard": {
+        "file": "app/routes/dashboard.tsx",
+        "id": "routes/dashboard",
+        "path": "dashboard",
+        "parentId": "root",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/_index": {
+        "file": "app/routes/_index.tsx",
+        "id": "routes/_index",
+        "index": true,
+        "parentId": "root",
+        "config": {
+          "runtime": "nodejs"
+        }
+      }
+    }
+  },
+  "remixConfig": {
+    "appDirectory": "/Users/1willcobb/Code/remix-mongo-test2/app",
+    "basename": "/",
+    "buildDirectory": "/Users/1willcobb/Code/remix-mongo-test2/build",
+    "future": {
+      "v3_fetcherPersist": false,
+      "v3_relativeSplatPath": false,
+      "v3_throwAbortReason": false,
+      "unstable_singleFetch": false
+    },
+    "manifest": false,
+    "publicPath": "/",
+    "routes": {
+      "root": {
+        "path": "",
+        "id": "root",
+        "file": "root.tsx"
+      },
+      "routes/dashboard.allUsers": {
+        "file": "routes/dashboard.allUsers.tsx",
+        "id": "routes/dashboard.allUsers",
+        "path": "allUsers",
+        "parentId": "routes/dashboard"
+      },
+      "routes/dashboard.$id.f": {
+        "file": "routes/dashboard.$id.f.tsx",
+        "id": "routes/dashboard.$id.f",
+        "path": "f",
+        "parentId": "routes/dashboard.$id"
+      },
+      "routes/dashboard.login": {
+        "file": "routes/dashboard.login.tsx",
+        "id": "routes/dashboard.login",
+        "path": "login",
+        "parentId": "routes/dashboard"
+      },
+      "routes/dashboard.$id": {
+        "file": "routes/dashboard.$id.tsx",
+        "id": "routes/dashboard.$id",
+        "path": ":id",
+        "parentId": "routes/dashboard"
+      },
+      "routes/dashboard": {
+        "file": "routes/dashboard.tsx",
+        "id": "routes/dashboard",
+        "path": "dashboard",
+        "parentId": "root"
+      },
+      "routes/_index": {
+        "file": "routes/_index.tsx",
+        "id": "routes/_index",
+        "index": true,
+        "parentId": "root"
+      }
+    },
+    "serverBuildFile": "index.js",
+    "serverModuleFormat": "esm",
+    "ssr": true
+  },
+  "viteConfig": {
+    "build": {
+      "assetsDir": "assets"
+    }
+  }
+}
