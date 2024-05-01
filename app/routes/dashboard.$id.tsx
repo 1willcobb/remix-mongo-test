@@ -1,4 +1,4 @@
-import { LoaderFunctionArgs } from "@remix-run/node";
+import { LoaderFunctionArgs } from "@vercel/remix";
 import { Outlet, useLoaderData, useRouteError } from "@remix-run/react";
 import { getUserById } from "../utils/controllers/UserController.server";
 

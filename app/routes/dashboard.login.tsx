@@ -1,4 +1,4 @@
-import { ActionFunctionArgs, redirect,json } from "@remix-run/node";
+import { ActionFunctionArgs, redirect,json } from "@vercel/remix";
 import { Outlet, Form, useRouteError } from "@remix-run/react";
 import { createUser } from "../utils/controllers/UserController.server";
 

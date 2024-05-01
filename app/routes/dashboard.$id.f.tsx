@@ -1,6 +1,6 @@
 import { getAllUsers, getUserById } from "../utils/controllers/UserController.server";
 import { Form, useLoaderData, redirect, useRouteError } from "@remix-run/react";
-import { json } from "@remix-run/node";
+import { json } from "@vercel/remix";
 import { addFriend } from "../utils/controllers/FriendController.server";
 import { useState } from "react";
 export const loader = async ({params}) => {

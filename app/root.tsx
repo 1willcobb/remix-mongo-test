@@ -9,7 +9,7 @@ import {
   useLoaderData,
 } from "@remix-run/react";
 
-import { ActionFunctionArgs, json } from "@remix-run/node";
+import { json } from "@vercel/remix";
 import {
   getAllUsers,
   createUser,

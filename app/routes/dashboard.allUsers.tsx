@@ -1,4 +1,4 @@
-import { json } from "@remix-run/node";
+import { json } from "@vercel/remix";
 import { Outlet, Form, useRouteError, useLoaderData } from "@remix-run/react";
 import { getAllUsers } from "../utils/controllers/UserController.server";
 export const loader = async () => {
