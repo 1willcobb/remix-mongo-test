@@ -11,6 +11,11 @@ import { createReadableStreamFromReadable } from "@remix-run/node";
 import { RemixServer } from "@remix-run/react";
 import { isbot } from "isbot";
 import { renderToPipeableStream } from "react-dom/server";
+import 'dotenv/config';
+// Import the MongoDB connection setup
+import connectDB from "./utils/db.server.js";
+
+connectDB();
 
 const ABORT_DELAY = 5_000;
 
@@ -138,3 +143,5 @@ function handleBrowserRequest(
     setTimeout(abort, ABORT_DELAY);
   });
 }
+
+

@@ -4,11 +4,6 @@ import compression from "compression";
 import morgan from "morgan";
 import { createRequestHandler } from "@remix-run/express";
 import { installGlobals } from "@vercel/remix";
-import 'dotenv/config';
-// Import the MongoDB connection setup
-import connectDB from "./app/utils/db.server.js";
-
-connectDB();
 
 installGlobals();
 
