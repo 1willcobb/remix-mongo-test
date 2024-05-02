@@ -1,18 +1,14 @@
 import {
-  Form,
   Links,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
-  redirect,
-  useLoaderData,
 } from "@remix-run/react";
 
 import { json } from "@vercel/remix";
 import {
   getAllUsers,
-  createUser,
 } from "./utils/controllers/UserController.server";
 
 export const loader = async () => {
@@ -25,7 +21,7 @@ export const loader = async () => {
   }
 };
 
-export function Layout({ children }: { children: React.ReactNode }) {
+export function Layout() {  
   // const users = useLoaderData();
 
   return (
